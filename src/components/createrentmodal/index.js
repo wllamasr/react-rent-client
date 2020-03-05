@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
+import CreateItemForm from '../createitemform/createitemform';
 import { httpClient } from '../../utils/httpClient';
-import CreateRentForm from '../createrentform';
 
 function CreateRentModal({ onCreated }) {
     const [visible, setVisible] = useState(false);
@@ -12,18 +12,16 @@ function CreateRentModal({ onCreated }) {
     }
 
     function handleOk(values) {
-        console.log(values)
         try {
             httpClient('rent', { body: values, method: 'POST' })
                 .then(response => {
-                    console.log(response);
-
                     onCreated()
                 })
 
         } catch (e) {
-            console.log("No onCreated event provided")
+            console.log("No onCreated function provided")
         }
+
         setVisible(false);
     }
 
@@ -39,7 +37,7 @@ function CreateRentModal({ onCreated }) {
                 confirmLoading={loading}
                 closable={false}
             >
-                <CreateRentForm onFinish={handleOk} onCancel={() => setVisible(false)} ></CreateRentForm>
+                <CreateItemForm onFinish={handleOk} onCancel={() => setVisible(false)} ></CreateItemForm>
             </Modal>
         </div>
     );

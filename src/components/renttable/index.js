@@ -5,6 +5,7 @@ import { httpClient } from '../../utils/httpClient';
 import CreateUserModal from "../createusermodal";
 
 import './renttable.css';
+import CreateRentModal from "../createitemmodal/createitemmodal";
 
 function RentTable() {
     const [data, setData] = useState([]);
@@ -21,11 +22,11 @@ function RentTable() {
 
     return (
         <div>
-            {/* <Row style={{ marginBottom: 14 }}>
+            <Row style={{ marginBottom: 14 }}>
                 <Col span={24}>
-                    <CreateUserModal onCreated={fetchData} ></CreateUserModal>
+                    <CreateRentModal onCreated={fetchData} ></CreateRentModal>
                 </Col>
-            </Row > */}
+            </Row >
             <Row>
                 <Col span={24}>
                     <Table columns={columns} dataSource={data}></Table>
