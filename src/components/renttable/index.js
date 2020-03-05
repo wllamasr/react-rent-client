@@ -4,16 +4,16 @@ import { columns } from './data';
 import { httpClient } from '../../utils/httpClient';
 import CreateUserModal from "../createusermodal";
 
-import './usertable.css'
+import './renttable.css';
 
-function UserTable() {
+function RentTable() {
     const [data, setData] = useState([]);
     useEffect(() => {
         fetchData();
     }, [])
 
     function fetchData() {
-        httpClient('users')
+        httpClient('rent')
             .then(response => {
                 setData(response)
             })
@@ -21,11 +21,11 @@ function UserTable() {
 
     return (
         <div>
-            <Row style={{ marginBottom: 14 }}>
+            {/* <Row style={{ marginBottom: 14 }}>
                 <Col span={24}>
                     <CreateUserModal onCreated={fetchData} ></CreateUserModal>
                 </Col>
-            </Row >
+            </Row > */}
             <Row>
                 <Col span={24}>
                     <Table columns={columns} dataSource={data}></Table>
@@ -35,4 +35,4 @@ function UserTable() {
     );
 }
 
-export default UserTable;
+export default RentTable;
