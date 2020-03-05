@@ -23,7 +23,7 @@ function App() {
           <Router />
         </div>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Rent platform &copy; {moment().format('YYYY')} Created by Wilmer Llamas</Footer>
+      <Footer style={{ textAlign: 'center' }}>Rent Platform &copy; {moment().format('YYYY')} Created by Wilmer Llamas</Footer>
     </Layout>
   );
 }

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Table, Row, Col } from 'antd';
 import { columns } from './data';
 import { httpClient } from '../../utils/httpClient';
-import CreateUserModal from "../createusermodal";
 
 import './renttable.css';
 import CreateRentModal from "../createitemmodal/createitemmodal";

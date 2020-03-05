@@ -5,7 +5,6 @@ import { httpClient } from '../../utils/httpClient';
 
 function CreateUserModal({ onCreated }) {
     const [visible, setVisible] = useState(false);
-    const [loading, setLoading] = useState(false);
 
     function showModal() {
         setVisible(true);
@@ -37,7 +36,6 @@ function CreateUserModal({ onCreated }) {
                 footer={false}
                 visible={visible}
                 title="Create new user"
-                confirmLoading={loading}
                 closable={false}
             >
                 <CreateUserForm onFinish={handleOk} onCancel={() => setVisible(false)} ></CreateUserForm>

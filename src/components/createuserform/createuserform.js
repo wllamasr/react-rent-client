@@ -1,4 +1,4 @@
-import { Form, Input, Button, InputNumber } from 'antd';
+import { Form, Input, Button } from 'antd';
 import React from 'react';
 
 const { Item } = Form;
