@@ -2,6 +2,7 @@ import React from 'react';
 import './admin.css'
 import { Tabs } from "antd";
 import ItemTable from '../../itemtable';
+import UserTable from '../../usertable';
 
 const { TabPane } = Tabs;
 
@@ -10,15 +11,15 @@ const Admin = () => {
         <Tabs>
             <TabPane
                 tab="ITEMS"
-                key="Items"
+                key="items"
             >
                 <ItemTable></ItemTable>
             </TabPane>
             <TabPane
-                tab={<span>WILMER2</span>}
-                key="2"
+                tab="USERS"
+                key="users"
             >
-                Tab 2
+                <UserTable></UserTable>
             </TabPane>
         </Tabs>
     );
