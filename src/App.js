@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Router from './Router';
+import { Layout, Menu } from 'antd';
+import moment from 'moment';
 
+const { Header, Content, Footer } = Layout;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Layout className="layout">
+      <Header>
+        <div className="logo" />
+        <Menu
+          theme="dark"
+          mode="horizontal"
+          defaultSelectedKeys={['2']}
+          style={{ lineHeight: '64px' }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+        </Menu>
+      </Header>
+      <Content style={{ padding: '0 50px' }}>
+        <div className="site-layout-content">
+          <Router />
+        </div>
+      </Content>
+      <Footer style={{ textAlign: 'center' }}>Rent platform &copy; {moment().format('YYYY')} Created by Wilmer Llamas</Footer>
+    </Layout>
   );
 }
 
