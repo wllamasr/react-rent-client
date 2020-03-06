@@ -36,7 +36,7 @@ export const columns = [
         render: (text, record) => {
             return (text === 'rented' ?
                 <PayRentModal rent={record}></PayRentModal> :
-                <span>{text}</span>
+                <span>{text.toUpperCase()}</span>
             );
         }
     },
