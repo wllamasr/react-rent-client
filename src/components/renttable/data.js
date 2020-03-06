@@ -1,6 +1,7 @@
 import React from 'react';
 import User from '../user/user';
 import Item from '../item/item';
+import PayRentModal from '../payrentmodal';
 
 export const columns = [
     {
@@ -28,6 +29,16 @@ export const columns = [
     {
         title: 'Total',
         dataIndex: 'total',
+    },
+    {
+        title: 'Status',
+        dataIndex: 'status',
+        render: (text, record) => {
+            return (text === 'rented' ?
+                <PayRentModal rent={record}></PayRentModal> :
+                <span>{text}</span>
+            );
+        }
     },
 ];
 

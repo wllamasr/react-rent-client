@@ -37,6 +37,7 @@ function CreateUserModal({ onCreated }) {
                 visible={visible}
                 title="Create new user"
                 closable={false}
+                onCancel={()=>setVisible(false)}
             >
                 <CreateUserForm onFinish={handleOk} onCancel={() => setVisible(false)} ></CreateUserForm>
             </Modal>

@@ -4,7 +4,7 @@ import { columns } from './data';
 import { httpClient } from '../../utils/httpClient';
 
 import './renttable.css';
-import CreateRentModal from "../createitemmodal/createitemmodal";
+import CreateRentModal from "../createrentmodal";
 
 function RentTable() {
     const [data, setData] = useState([]);

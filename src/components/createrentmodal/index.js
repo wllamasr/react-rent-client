@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
-import CreateItemForm from '../createitemform/createitemform';
 import { httpClient } from '../../utils/httpClient';
+import CreateRentForm from '../createrentform';
 
 function CreateRentModal({ onCreated }) {
     const [visible, setVisible] = useState(false);
@@ -28,16 +28,16 @@ function CreateRentModal({ onCreated }) {
     return (
         <div>
             <Button type="primary" onClick={showModal}>
-                Create new item
+                Create new rental
             </Button>
             <Modal
                 footer={false}
                 visible={visible}
                 title="Create new item"
                 confirmLoading={loading}
-                closable={false}
+                onCancel={()=>setVisible(false)}
             >
-                <CreateItemForm onFinish={handleOk} onCancel={() => setVisible(false)} ></CreateItemForm>
+                <CreateRentForm onFinish={handleOk} onCancel={() => setVisible(false)} ></CreateRentForm>
             </Modal>
         </div>
     );

@@ -20,6 +20,7 @@ const tailLayout = {
         span: 16,
     }
 };
+
 const dateFormat = 'YYYY-MM-DD';
 
 const CreateRentForm = ({ onFinish, onCancel }) => {

@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import moment from 'moment';
+
+moment.defaultFormat = 'YYYY-MM-DD';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
