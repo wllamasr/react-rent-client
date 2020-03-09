@@ -7,7 +7,7 @@ function PayRentModal({ rent }) {
     const [visible, setVisible] = useState(false);
     const { item, user } = rent;
 
-    const days = moment(moment().format()).diff(rent.to_date, 'days');
+    const days = moment(moment().format()).diff(rent.toDate, 'days');
 
     function showModal() {
         setVisible(true);
@@ -57,11 +57,11 @@ function PayRentModal({ rent }) {
                 </Row>
                 <Row>
                     <Col span={12}> From date </Col>
-                    <Col span={12}> {rent.from_date} </Col>
+                    <Col span={12}> {rent.fromDate} </Col>
                 </Row>
                 <Row>
                     <Col span={12}> To date </Col>
-                    <Col span={12}> {rent.to_date} </Col>
+                    <Col span={12}> {rent.toDate} </Col>
                 </Row>
                 {
                     days > 0 &&

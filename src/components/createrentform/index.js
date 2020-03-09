@@ -54,10 +54,10 @@ const CreateRentForm = ({ onFinish, onCancel }) => {
                     ))}
                 </Select>
             </Item>
-            <Item name="from_date" label="From date">
+            <Item name="fromDate" label="From date">
                 <DatePicker format={dateFormat} />
             </Item>
-            <Item name="to_date" label="To date" rules={[{ required: true }]}>
+            <Item name="toDate" label="To date" rules={[{ required: true }]}>
                 <DatePicker format={dateFormat} />
             </Item>
             <Item {...tailLayout}>

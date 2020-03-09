@@ -20,11 +20,11 @@ export const columns = [
     },
     {
         title: 'From date',
-        dataIndex: 'from_date',
+        dataIndex: 'fromDate',
     },
     {
         title: 'To date',
-        dataIndex: 'to_date',
+        dataIndex: 'toDate',
     },
     {
         title: 'Total',

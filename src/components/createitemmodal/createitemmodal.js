@@ -25,14 +25,15 @@ function CreateRentModal({ onCreated }) {
 
     return (
         <div>
-            <Button type="primary" onClick={showModal}>
+            <Button type="primary" onClick={showModal} id="create-new-item">
                 Create new item
             </Button>
             <Modal
                 footer={false}
                 visible={visible}
                 title="Create new item"
-                onCancel={()=>setVisible(false)}
+                onCancel={() => setVisible(false)}
+                destroyOnClose={true}
             >
                 <CreateItemForm onFinish={handleOk} onCancel={() => setVisible(false)} ></CreateItemForm>
             </Modal>

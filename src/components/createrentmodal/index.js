@@ -5,7 +5,6 @@ import CreateRentForm from '../createrentform';
 
 function CreateRentModal({ onCreated }) {
     const [visible, setVisible] = useState(false);
-    const [loading, setLoading] = useState(false);
 
     function showModal() {
         setVisible(true);
@@ -33,8 +32,9 @@ function CreateRentModal({ onCreated }) {
                 footer={false}
                 visible={visible}
                 title="Create new item"
-                confirmLoading={loading}
+                confirmLoading={false}
                 onCancel={() => setVisible(false)}
+                destroyOnClose={true}
             >
                 <CreateRentForm onFinish={handleOk} onCancel={() => setVisible(false)} ></CreateRentForm>
             </Modal>
